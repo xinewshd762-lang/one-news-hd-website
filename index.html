@@ -1,1 +1,496 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>ONE NEWS HD | تازہ ترین خبریں</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, "Noto Nastaliq Urdu", sans-serif;
+    background:#f1f1f1;
+    color:#222;
+}
+
+/* HEADER */
+header{
+    background:#080808;
+    color:#fff;
+    text-align:center;
+    padding:20px 10px;
+}
+
+.logo{
+    font-size:38px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#e00000;
+}
+
+.tagline{
+    color:#ddd;
+    margin-top:6px;
+}
+
+/* NAVIGATION */
+nav{
+    background:#c90000;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:13px 18px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#900000;
+}
+
+/* BREAKING NEWS */
+.breaking{
+    background:#fff;
+    display:flex;
+    overflow:hidden;
+    border-bottom:3px solid #d00000;
+}
+
+.breaking-title{
+    background:#d00000;
+    color:white;
+    padding:12px 20px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.ticker{
+    padding:12px;
+    white-space:nowrap;
+    animation:ticker 18s linear infinite;
+}
+
+@keyframes ticker{
+    from{
+        transform:translateX(-100%);
+    }
+    to{
+        transform:translateX(100%);
+    }
+}
+
+/* MAIN */
+.container{
+    max-width:1100px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.section-title{
+    background:#111;
+    color:#fff;
+    border-right:7px solid #d00000;
+    padding:13px 18px;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+/* NEWS CONTAINER */
+.news-container{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+/* NEWS CARD */
+.news-post{
+    background:#fff;
+
+    /* RED BORDER LINE */
+    border-right:7px solid #d00000;
+
+    border-radius:7px;
+    overflow:hidden;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+
+/* TOP RED LINE */
+.news-post::before{
+    content:"";
+    display:block;
+    height:4px;
+    background:#d00000;
+}
+
+/* IMAGE */
+.news-post img{
+    width:100%;
+    max-height:520px;
+    object-fit:cover;
+    display:block;
+}
+
+/* CONTENT */
+.news-content{
+    padding:20px;
+}
+
+.news-post h2{
+    color:#b00000;
+    font-size:28px;
+    line-height:1.6;
+    margin-bottom:10px;
+}
+
+.news-date{
+    color:#777;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.news-post p{
+    font-size:18px;
+    line-height:2;
+    margin-bottom:10px;
+}
+
+.reporter{
+    color:#b00000;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+/* BREAKING LABEL */
+.breaking-label{
+    display:inline-block;
+    background:#d00000;
+    color:#fff;
+    padding:6px 13px;
+    border-radius:4px;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+/* CEO */
+.ceo{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px 10px;
+    margin-top:30px;
+}
+
+.ceo h2{
+    color:#e00000;
+    margin-bottom:15px;
+}
+
+.ceo p{
+    font-size:18px;
+    margin:8px;
+}
+
+.contact{
+    display:inline-block;
+    margin-top:13px;
+    background:#d00000;
+    color:#fff;
+    padding:11px 27px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    color:#aaa;
+    text-align:center;
+    padding:20px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .logo{
+        font-size:29px;
+    }
+
+    nav a{
+        font-size:14px;
+        padding:10px 12px;
+    }
+
+    .news-post h2{
+        font-size:22px;
+    }
+
+    .news-post p{
+        font-size:16px;
+    }
+
+    .news-content{
+        padding:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">
+        ONE <span>NEWS</span> HD
+    </div>
+
+    <div class="tagline">
+        تازہ ترین خبریں، سب سے پہلے
+    </div>
+
+</header>
+
+
+<!-- MENU -->
+<nav>
+    <a href="#">ہوم</a>
+    <a href="#">پاکستان</a>
+    <a href="#">لاہور</a>
+    <a href="#">دنیا</a>
+    <a href="#">کھیل</a>
+    <a href="#">کاروبار</a>
+    <a href="#">رابطہ</a>
+</nav>
+
+
+<!-- BREAKING TICKER -->
+<div class="breaking">
+
+    <div class="breaking-title">
+        بریکنگ نیوز
+    </div>
+
+    <div class="ticker">
+        ONE NEWS HD — تازہ ترین ملکی، غیر ملکی اور مقامی خبریں
+    </div>
+
+</div>
+
+
+<!-- MAIN NEWS -->
+<main class="container">
+
+    <div class="section-title">
+        تازہ ترین خبریں
+    </div>
+
+
+    <div class="news-container">
+
+
+        <!-- =====================================
+             پرانی خبر
+             ===================================== -->
+
+        <article class="news-post">
+
+            <div class="news-content">
+
+                <h2>
+                    One News HD پر خوش آمدید
+                </h2>
+
+                <div class="news-date">
+                    26 اگست 2026
+                </div>
+
+                <p>
+                    One News HD پر ملک اور دنیا کی اہم ترین خبریں
+                    بروقت اور ذمہ داری کے ساتھ پیش کی جاتی ہیں۔
+                </p>
+
+                <div class="reporter">
+                    One News HD
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================
+             آج کی مثال نیوز
+             نئی خبر ہمیشہ LAST میں ڈالیں
+             ===================================== -->
+
+        <article class="news-post">
+
+            <img
+                src="https://placehold.co/1200x600/111111/ffffff?text=ONE+NEWS+HD"
+                alt="ONE NEWS HD"
+            >
+
+            <div class="news-content">
+
+                <div class="breaking-label">
+                    تازہ ترین
+                </div>
+
+                <h2>
+                    لارڈز ٹیسٹ: پاکستان کی شاندار بولنگ، انگلینڈ 248 رنز پر 9 وکٹیں گنوا بیٹھا
+                </h2>
+
+                <div class="news-date">
+                    27 اگست 2026
+                </div>
+
+                <p>
+                    پاکستان اور انگلینڈ کے درمیان لارڈز میں دوسرے ٹیسٹ
+                    کے پہلے روز پاکستانی بولرز نے عمدہ کارکردگی دکھائی۔
+                </p>
+
+                <p>
+                    دن کا کھیل کم روشنی کے باعث ختم ہونے تک انگلینڈ
+                    248 رنز پر 9 وکٹیں گنوا چکا تھا۔
+                </p>
+
+                <p>
+                    محمد عباس نے شاندار بولنگ کرتے ہوئے چار اہم وکٹیں
+                    حاصل کیں جبکہ پاکستان نے انگلینڈ کے بیٹنگ آرڈر کو
+                    مسلسل دباؤ میں رکھا۔
+                </p>
+
+                <div class="reporter">
+                    رپورٹ: One News HD
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =====================================
+             نئی خبر یہاں ADD کریں
+             یہ ہمیشہ سب سے آخر میں ہوگی
+             JavaScript اسے TOP پر لے آئے گا
+             ===================================== -->
+
+        <!--
+        مثال:
+
+        <article class="news-post">
+
+            <img src="images/news.jpg" alt="خبر">
+
+            <div class="news-content">
+
+                <div class="breaking-label">
+                    بریکنگ نیوز
+                </div>
+
+                <h2>
+                    یہاں نئی خبر کی ہیڈ لائن لکھیں
+                </h2>
+
+                <div class="news-date">
+                    27 اگست 2026
+                </div>
+
+                <p>
+                    یہاں خبر کی تفصیل لکھیں۔
+                </p>
+
+                <div class="reporter">
+                    ڈسٹرکٹ رپورٹر: فرمان علی
+                </div>
+
+            </div>
+
+        </article>
+        -->
+
+    </div>
+
+</main>
+
+
+<!-- CEO -->
+<section class="ceo">
+
+    <h2>
+        ONE NEWS HD
+    </h2>
+
+    <p>
+        <strong>CEO:</strong> ALI ASGHAR
+    </p>
+
+    <p>
+        <strong>Contact:</strong> 03220751456
+    </p>
+
+    <a
+        class="contact"
+        href="tel:03220751456">
+        رابطہ کریں
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026 ONE NEWS HD — All Rights Reserved
+
+</footer>
+
+
+<!-- =====================================
+     AUTOMATIC TOP NEWS SYSTEM
+     ===================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const container =
+        document.querySelector(".news-container");
+
+    if(!container) return;
+
+    const posts =
+        Array.from(
+            container.querySelectorAll(".news-post")
+        );
+
+    /*
+       Last added news → TOP
+    */
+
+    posts.reverse().forEach(function(post){
+
+        container.prepend(post);
+
+    });
+
+});
+
+</script>
+
+</body>
+                                      </html>
