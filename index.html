@@ -1,1 +1,1312 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ONE NEWS HD | تازہ ترین خبریں</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    font-family:Arial,"Noto Nastaliq Urdu","Noto Naskh Arabic",sans-serif;
+    background:#f2f2f2;
+    color:#222;
+}
+
+/* =========================
+   TOP IMAGE
+========================= */
+
+.top-image{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    background:#000;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    background:#c90000;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:11px 15px;
+    font-weight:bold;
+    font-size:14px;
+    transition:.2s;
+}
+
+nav a:hover{
+    background:#8f0000;
+}
+
+/* =========================
+   BREAKING NEWS
+========================= */
+
+.breaking{
+    width:100%;
+    background:#fff;
+    border-bottom:3px solid #d00000;
+    display:flex;
+    overflow:hidden;
+    align-items:center;
+    direction:rtl;
+}
+
+.breaking-title{
+    background:#d00000;
+    color:white;
+    padding:10px 15px;
+    font-weight:bold;
+    white-space:nowrap;
+    font-size:14px;
+    z-index:2;
+}
+
+.ticker-wrap{
+    flex:1;
+    overflow:hidden;
+    position:relative;
+    direction:ltr;
+}
+
+.ticker{
+    display:inline-block;
+    white-space:nowrap;
+    padding:10px 20px;
+    animation:ticker 25s linear infinite;
+    font-size:14px;
+    font-weight:bold;
+    direction:rtl;
+}
+
+.ticker:hover{
+    animation-play-state:paused;
+}
+
+@keyframes ticker{
+    0%{
+        transform:translateX(-100%);
+    }
+
+    100%{
+        transform:translateX(100%);
+    }
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.container{
+    max-width:1050px;
+    margin:20px auto;
+    padding:0 12px;
+}
+
+.section-title{
+    background:#111;
+    color:white;
+    border-right:6px solid #d00000;
+    padding:11px 15px;
+    margin-bottom:15px;
+    font-size:21px;
+    font-weight:bold;
+}
+
+.news-container{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* =========================
+   NEWS CARD
+========================= */
+
+.news-post{
+    background:#fff;
+    border-right:5px solid #d00000;
+    border-top:3px solid #d00000;
+    border-radius:5px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.10);
+    transition:.25s;
+}
+
+.news-post:hover{
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+    transform:translateY(-1px);
+}
+
+.news-content{
+    padding:16px;
+}
+
+.news-label{
+    display:inline-block;
+    background:#d00000;
+    color:white;
+    padding:4px 9px;
+    border-radius:3px;
+    font-weight:bold;
+    margin-bottom:8px;
+    font-size:13px;
+}
+
+.news-post h2{
+    color:#a90000;
+    font-size:24px;
+    line-height:1.6;
+    margin-bottom:7px;
+}
+
+.news-date{
+    color:#777;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.news-post p{
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:10px;
+}
+
+.news-photo{
+    width:100%;
+    height:auto;
+    display:block;
+    max-height:650px;
+    object-fit:contain;
+    background:#111;
+    margin:10px 0 15px;
+    border-radius:4px;
+}
+
+/* =========================
+   NEWS INFO
+========================= */
+
+.news-info{
+    background:#f7f7f7;
+    border-right:3px solid #d00000;
+    padding:10px;
+    margin-top:10px;
+    line-height:1.9;
+    font-size:14px;
+}
+
+.reporter{
+    color:#a90000;
+    font-weight:bold;
+    margin-top:10px;
+    font-size:14px;
+}
+
+/* =========================
+   SHARE
+========================= */
+
+.share-box{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    flex-wrap:wrap;
+    margin-top:13px;
+    padding-top:10px;
+    border-top:1px solid #eee;
+}
+
+.share-title{
+    color:#555;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.share-btn{
+    border:0;
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+    padding:7px 11px;
+    border-radius:4px;
+    font-size:11px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+}
+
+.facebook-btn{
+    background:#1877F2;
+}
+
+.share-btn:hover{
+    opacity:.85;
+    transform:scale(1.03);
+}
+
+/* =========================
+   NEW NEWS HIGHLIGHT
+========================= */
+
+.latest-news{
+    border-right-color:#ff0000;
+    box-shadow:0 3px 15px rgba(208,0,0,.20);
+}
+
+.latest-news .news-label{
+    animation:blinkNews 1.3s infinite;
+}
+
+@keyframes blinkNews{
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.65;
+    }
+}
+
+/* =========================
+   CEO
+========================= */
+
+.ceo{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:22px 10px;
+    margin-top:25px;
+}
+
+.ceo h2{
+    color:#e00000;
+    margin-bottom:9px;
+    font-size:23px;
+}
+
+.ceo p{
+    font-size:16px;
+    margin:5px;
+}
+
+.contact{
+    display:inline-block;
+    margin-top:10px;
+    background:#d00000;
+    color:white;
+    padding:8px 20px;
+    text-decoration:none;
+    border-radius:4px;
+    font-size:14px;
+}
+
+.contact:hover{
+    background:#a00000;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#000;
+    color:#aaa;
+    text-align:center;
+    padding:15px;
+    font-size:13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .top-image{
+        width:100%;
+        height:auto;
+    }
+
+    nav a{
+        font-size:11px;
+        padding:8px 9px;
+    }
+
+    .breaking-title{
+        padding:8px 9px;
+        font-size:11px;
+    }
+
+    .ticker{
+        font-size:11px;
+        padding:8px;
+        animation-duration:20s;
+    }
+
+    .container{
+        padding:0 7px;
+        margin-top:15px;
+    }
+
+    .section-title{
+        font-size:18px;
+    }
+
+    .news-content{
+        padding:13px;
+    }
+
+    .news-post h2{
+        font-size:20px;
+        line-height:1.65;
+    }
+
+    .news-post p{
+        font-size:15px;
+        line-height:1.9;
+    }
+
+    .news-info{
+        font-size:13px;
+    }
+
+    .share-title{
+        width:100%;
+    }
+
+    .share-btn{
+        padding:6px 9px;
+        font-size:10px;
+    }
+
+}
+
+/* =========================
+   EXTRA SMALL
+========================= */
+
+@media(max-width:380px){
+
+    .news-post h2{
+        font-size:18px;
+    }
+
+    .news-post p{
+        font-size:14px;
+    }
+
+    .ceo h2{
+        font-size:20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     TOP IMAGE
+========================= -->
+
+<img
+    class="top-image"
+    src="file_000000001d5882118d06a379bb5594bc.png"
+    alt="ONE NEWS HD"
+>
+
+<!-- =========================
+     MENU
+========================= -->
+
+<nav>
+
+<a href="#">ہوم</a>
+<a href="#">پاکستان</a>
+<a href="#">پنجاب</a>
+<a href="#">لاہور</a>
+<a href="#">دنیا</a>
+<a href="#">کھیل</a>
+<a href="#">کاروبار</a>
+<a href="#">رابطہ</a>
+
+</nav>
+
+<!-- =========================
+     BREAKING NEWS SLIDER
+========================= -->
+
+<div class="breaking">
+
+<div class="breaking-title">
+🚨 بریکنگ نیوز
+</div>
+
+<div class="ticker-wrap">
+
+<div class="ticker">
+
+🚨 اہم خبر | پاکستان ریلوے — آپریشنل اسٹاف کی جانب سے آپریشنل الاؤنس میں نظرثانی اور اضافے کی درخواست سامنے آگئی
+
+&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+
+کراچی میں پانی کے بحران کے دوران 36 انچ کی مبینہ میٹھے پانی کی بلک سپلائی لائن سے پانی کے اخراج کی اطلاعات
+
+&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+
+ONE NEWS HD — ہر خبر آپ کے ساتھ
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="container">
+
+<div class="section-title">
+تازہ ترین خبریں
+</div>
+
+<div class="news-container">
+
+<!-- =========================
+     NEWS 1
+     NEW PAKISTAN RAILWAYS NEWS
+========================= -->
+
+<article class="news-post latest-news">
+
+<div class="news-content">
+
+<div class="news-label">
+🚨 اہم خبر | پاکستان ریلوے
+</div>
+
+<h2>
+پاکستان ریلوے کے ٹریڈنگ/آپریشنل اسٹاف کی جانب سے آپریشنل الاؤنس میں نظرثانی اور اضافے کی درخواست
+</h2>
+
+<div class="news-date">
+28 اگست 2026
+</div>
+
+<img
+class="news-photo"
+src="Ali00015.png"
+alt="پاکستان ریلوے"
+loading="eager"
+>
+
+<p>
+پاکستان ریلوے کے ٹریڈنگ/آپریشنل اسٹاف کی جانب سے آپریشنل الاؤنس میں نظرثانی اور اضافے کی درخواست سامنے آئی ہے۔ ذرائع کے مطابق اسٹاف کا مؤقف ہے کہ وہ اپنی ذمہ داریاں مشکل اور چیلنجنگ حالات میں انجام دے رہے ہیں، اس لیے ان کے مسائل اور مطالبات پر سنجیدگی سے غور کیا جانا چاہیے۔
+</p>
+
+<p>
+درخواست میں آپریشنل اسٹاف کے حقِ مطالبہ، عملی محنت کے اعتراف اور ملازمین کی فلاح و بہبود پر زور دیا گیا ہے۔
+</p>
+
+<div class="news-info">
+
+📌 <strong>درخواست گزار:</strong> محمد عثمان شاہد<br>
+
+📍 <strong>مقام:</strong> پاکستان ریلوے ہیڈکوارٹرز لاہور<br>
+
+📰 <strong>ادارہ:</strong> ONE NEWS HD
+
+</div>
+
+<p>
+ہماری کوشش ہے کہ پاکستان ریلوے سمیت عوامی اہمیت کی ہر خبر آپ تک بروقت اور ذمہ داری کے ساتھ پہنچائی جائے۔
+</p>
+
+<div class="reporter">
+ONE NEWS HD — ہر خبر آپ کے ساتھ 📰
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button
+class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button
+class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 2
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+🚨 بریکنگ نیوز | کراچی
+</div>
+
+<h2>
+کراچی میں پانی کے بحران کے دوران ایک اہم معاملہ سامنے آیا
+</h2>
+
+<div class="news-date">
+28 اگست 2026
+</div>
+
+<img
+class="news-photo"
+src="file_0000000022208211b0668ecd5031d653.png"
+alt="کراچی پانی بحران"
+loading="lazy"
+>
+
+<p>
+کراچی میں پانی کے بحران کے دوران ایک اہم معاملہ سامنے آیا ہے۔ لیاری ندی، سندھی ہوٹل کے آخری اسٹاپ اور تین ہٹی کے قریب 36 انچ کی مبینہ میٹھے پانی کی بلک سپلائی لائن سے پانی کے اخراج کی اطلاعات ہیں، جس کے باعث بڑی مقدار میں قیمتی پانی ضائع ہونے کا خدشہ ہے۔
+</p>
+
+<p>
+شہریوں نے واٹر بورڈ، واٹر بورڈ پولیس اور متعلقہ حکام سے فوری نوٹس لینے، لائن کا معائنہ کرنے اور پانی کے ضیاع کی وجوہات کی تحقیقات کا مطالبہ کیا ہے۔
+</p>
+
+<div class="news-info">
+
+📍 <strong>مقام:</strong> کراچی<br>
+
+🎥 <strong>ویڈیو:</strong> ONE NEWS HD<br>
+
+📰 <strong>کراچی بیورو رپورٹ:</strong> حب علی جھانگر
+
+</div>
+
+<div class="reporter">
+کراچی بیورو رپورٹ: حب علی جھانگر
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 3
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+پاکستان
+</div>
+
+<h2>
+ملک میں موسمی صورتحال کے پیش نظر شہریوں کو احتیاط کی ہدایت
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+متعلقہ اداروں کی جانب سے شہریوں کو موسم کی صورتحال کو مدنظر رکھتے ہوئے احتیاطی تدابیر اختیار کرنے کی ہدایت کی گئی ہے۔
+</p>
+
+<div class="reporter">
+رپورٹ: ONE NEWS HD
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 4
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+لاہور
+</div>
+
+<h2>
+لاہور میں ٹریفک کی روانی برقرار، شہریوں کو احتیاط سے سفر کی ہدایت
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+لاہور کے مختلف علاقوں میں ٹریفک معمول کے مطابق رواں دواں ہے۔ شہریوں کو ڈرائیونگ کے دوران ٹریفک قوانین کی پابندی کرنے کی ہدایت کی گئی ہے۔
+</p>
+
+<div class="reporter">
+ڈسٹرکٹ رپورٹر: فرمان علی
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 5
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+پاکستان
+</div>
+
+<h2>
+شہریوں کے لیے سفری احتیاطی تدابیر پر زور
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+متعلقہ حکام نے شہریوں کو سفر کے دوران رفتار کم رکھنے، حفاظتی اصولوں پر عمل کرنے اور صورتحال سے باخبر رہنے کی ہدایت کی ہے۔
+</p>
+
+<div class="reporter">
+رپورٹ: ONE NEWS HD
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 6
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+دنیا
+</div>
+
+<h2>
+عالمی سطح پر اہم سفارتی اور سیاسی سرگرمیاں جاری
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+مختلف ممالک کے درمیان سفارتی رابطوں اور اہم عالمی معاملات پر بات چیت کا سلسلہ جاری ہے۔
+</p>
+
+<div class="reporter">
+رپورٹ: ONE NEWS HD
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 7
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+کھیل
+</div>
+
+<h2>
+کھیلوں کی دنیا سے اہم اپ ڈیٹس، شائقین کی نظریں اہم مقابلوں پر
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+کھیلوں کے مختلف مقابلوں میں شائقین کی دلچسپی برقرار ہے اور اہم مقابلوں سے متعلق تازہ اطلاعات سامنے آ رہی ہیں۔
+</p>
+
+<div class="reporter">
+اسپورٹس ڈیسک: ONE NEWS HD
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 8
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+کاروبار
+</div>
+
+<h2>
+کاروباری سرگرمیوں اور مارکیٹ صورتحال پر نظر
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+ملک میں کاروباری سرگرمیوں اور مارکیٹ کی صورتحال پر کاروباری حلقوں کی نظریں مرکوز ہیں۔
+</p>
+
+<div class="reporter">
+بزنس ڈیسک: ONE NEWS HD
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 9
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+پنجاب
+</div>
+
+<h2>
+پنجاب کے مختلف علاقوں میں انتظامی سرگرمیاں جاری
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+صوبے کے مختلف اضلاع میں عوامی سہولیات اور انتظامی امور سے متعلق سرگرمیاں جاری ہیں۔
+</p>
+
+<div class="reporter">
+رپورٹ: ONE NEWS HD
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 10
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+ٹیکنالوجی
+</div>
+
+<h2>
+پاکستان میں ڈیجیٹل ٹیکنالوجی کے استعمال میں اضافہ
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+ملک میں آن لائن خدمات، ڈیجیٹل پلیٹ فارمز اور ٹیکنالوجی کے استعمال کا رجحان بڑھ رہا ہے۔
+</p>
+
+<div class="reporter">
+ٹیک ڈیسک: ONE NEWS HD
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 11
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+قومی
+</div>
+
+<h2>
+عوامی مسائل کے حل کے لیے متعلقہ اداروں کی سرگرمیاں جاری
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+مختلف علاقوں میں شہری مسائل کے حل اور عوامی سہولیات کی بہتری کے لیے متعلقہ اداروں کی سرگرمیاں جاری ہیں۔
+</p>
+
+<div class="reporter">
+رپورٹ: ONE NEWS HD
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 12
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+مقامی خبر
+</div>
+
+<h2>
+شہریوں کو اہم مقامات پر احتیاط اور تعاون کی اپیل
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+شہریوں سے اپیل کی گئی ہے کہ وہ متعلقہ حکام کے ساتھ تعاون کریں اور کسی بھی ہنگامی صورتحال میں فوری اطلاع دیں۔
+</p>
+
+<div class="reporter">
+ڈسٹرکٹ رپورٹر: فرمان علی
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     NEWS 13
+========================= -->
+
+<article class="news-post">
+
+<div class="news-content">
+
+<div class="news-label">
+ONE NEWS HD
+</div>
+
+<h2>
+تازہ ترین اطلاعات کے لیے ONE NEWS HD کے ساتھ جڑے رہیں
+</h2>
+
+<div class="news-date">
+27 اگست 2026
+</div>
+
+<p>
+اہم ملکی، عالمی، مقامی، کھیل اور کاروباری خبروں کے لیے ONE NEWS HD کی تازہ ترین اپ ڈیٹس دیکھتے رہیں۔
+</p>
+
+<div class="reporter">
+نیوز ڈیسک: ONE NEWS HD
+</div>
+
+<div class="share-box">
+
+<span class="share-title">
+خبر شیئر کریں:
+</span>
+
+<button class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</main>
+
+<!-- =========================
+     CEO
+========================= -->
+
+<section class="ceo">
+
+<h2>
+ONE NEWS HD
+</h2>
+
+<p>
+<strong>CEO:</strong> ALI ASGHAR
+</p>
+
+<p>
+<strong>Contact:</strong> 03220751456
+</p>
+
+<a
+class="contact"
+href="tel:03220751456">
+📞 رابطہ کریں
+</a>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+© 2026 ONE NEWS HD — All Rights Reserved
+
+</footer>
+
+
+<script>
+
+/* =========================
+   LAST NEWS = TOP
+========================= */
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+    const container =
+        document.querySelector(".news-container");
+
+    if(!container) return;
+
+    const posts =
+        Array.from(
+            container.querySelectorAll(".news-post")
+        );
+
+    /*
+       آخری خبر خود TOP پر آ جائے گی۔
+       اس لیے نئی خبر ہمیشہ آخر میں
+       article کے طور پر شامل کریں۔
+    */
+
+    posts.reverse().forEach(
+        function(post){
+            container.prepend(post);
+        }
+    );
+
+});
+
+
+/* =========================
+   GET NEWS DATA
+========================= */
+
+function getNews(button){
+
+    const article =
+        button.closest(".news-post");
+
+    const titleElement =
+        article.querySelector("h2");
+
+    const title =
+        titleElement
+        ? titleElement.innerText.trim()
+        : "ONE NEWS HD";
+
+  
