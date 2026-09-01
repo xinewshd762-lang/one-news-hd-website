@@ -1,1 +1,1461 @@
+<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ONE NEWS HD | ہر خبر آپ کے ساتھ</title><meta name="description"
+content="ONE NEWS HD پاکستان، پنجاب، لاہور، صادق آباد، کراچی، دنیا، کھیل اور کاروبار کی تازہ ترین خبریں">
 
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+    Arial,
+    "Noto Nastaliq Urdu",
+    "Noto Naskh Arabic",
+    sans-serif;
+
+    color:#222;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.78),
+        rgba(0,0,0,.82)
+    ),
+    url("background22.png");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =====================================================
+   TOP HEADER IMAGE
+===================================================== */
+
+.top-image{
+
+    width:100%;
+    height:auto;
+
+    display:block;
+
+    background:#000;
+
+    object-fit:contain;
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav{
+
+    position:sticky;
+    top:0;
+    z-index:9999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+    background:
+    linear-gradient(
+        90deg,
+        #580000,
+        #c90000,
+        #ef0000,
+        #c90000,
+        #580000
+    );
+
+    border-top:1px solid #ff6666;
+    border-bottom:3px solid #050505;
+
+    box-shadow:
+    0 4px 18px rgba(0,0,0,.65);
+
+}
+
+nav a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    padding:13px 17px;
+
+    transition:.25s;
+
+    border-left:
+    1px solid rgba(255,255,255,.14);
+
+}
+
+nav a:hover{
+
+    background:#700000;
+
+    transform:translateY(-1px);
+
+}
+
+
+/* =====================================================
+   BREAKING NEWS
+===================================================== */
+
+.breaking{
+
+    display:flex;
+
+    width:100%;
+
+    background:#fff;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border-bottom:3px solid #d00000;
+
+    box-shadow:
+    0 4px 14px rgba(0,0,0,.45);
+
+}
+
+.breaking-title{
+
+    flex-shrink:0;
+
+    color:#fff;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f00000,
+        #8d0000
+    );
+
+    padding:11px 18px;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    white-space:nowrap;
+
+    box-shadow:
+    4px 0 8px rgba(0,0,0,.2);
+
+}
+
+.ticker-wrap{
+
+    flex:1;
+
+    overflow:hidden;
+
+    direction:ltr;
+
+}
+
+.ticker{
+
+    display:inline-block;
+
+    white-space:nowrap;
+
+    direction:rtl;
+
+    padding:11px 20px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    color:#222;
+
+    animation:
+    ticker 30s linear infinite;
+
+}
+
+.ticker:hover{
+
+    animation-play-state:paused;
+
+}
+
+@keyframes ticker{
+
+    0%{
+        transform:translateX(-100%);
+    }
+
+    100%{
+        transform:translateX(100%);
+    }
+
+}
+
+
+/* =====================================================
+   LIVE BAR
+===================================================== */
+
+.live-bar{
+
+    max-width:1100px;
+
+    margin:16px auto 0;
+
+    padding:0 12px;
+
+}
+
+.live-inner{
+
+    background:
+    linear-gradient(
+        90deg,
+        #111,
+        #252525
+    );
+
+    color:#fff;
+
+    border-right:5px solid #e00000;
+
+    padding:10px 15px;
+
+    border-radius:5px;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.4);
+
+    font-size:13px;
+
+}
+
+.live-dot{
+
+    display:inline-block;
+
+    width:9px;
+    height:9px;
+
+    background:#ff0000;
+
+    border-radius:50%;
+
+    margin-left:6px;
+
+    animation:
+    liveBlink 1s infinite;
+
+}
+
+@keyframes liveBlink{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.25;
+    }
+
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:22px auto;
+
+    padding:0 12px;
+
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:
+    linear-gradient(
+        90deg,
+        #090909,
+        #252525
+    );
+
+    color:#fff;
+
+    border-right:7px solid #e00000;
+
+    padding:12px 17px;
+
+    margin-bottom:17px;
+
+    font-size:23px;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 4px 16px rgba(0,0,0,.45);
+
+}
+
+.section-title span{
+
+    color:#e00000;
+
+    font-size:13px;
+
+}
+
+
+/* =====================================================
+   NEWS GRID
+===================================================== */
+
+.news-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+/* =====================================================
+   NEWS CARD
+===================================================== */
+
+.news-post{
+
+    position:relative;
+
+    background:
+    rgba(255,255,255,.98);
+
+    border-right:5px solid #c90000;
+
+    border-top:3px solid #d00000;
+
+    border-radius:7px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.38);
+
+    transition:.25s;
+
+}
+
+.news-post:hover{
+
+    transform:
+    translateY(-2px);
+
+    box-shadow:
+    0 9px 27px rgba(0,0,0,.48);
+
+}
+
+.latest-news{
+
+    border-right-color:#ff0000;
+
+}
+
+
+/* =====================================================
+   NEWS CONTENT
+===================================================== */
+
+.news-content{
+
+    padding:18px;
+
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.news-label{
+
+    display:inline-block;
+
+    color:#fff;
+
+    background:
+    linear-gradient(
+        135deg,
+        #e40000,
+        #900000
+    );
+
+    padding:5px 11px;
+
+    border-radius:4px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    margin-bottom:9px;
+
+}
+
+.latest-news .news-label{
+
+    animation:
+    newsPulse 1.4s infinite;
+
+}
+
+@keyframes newsPulse{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.55;
+    }
+
+}
+
+
+/* =====================================================
+   HEADLINE
+===================================================== */
+
+.news-post h2{
+
+    color:#a50000;
+
+    font-size:25px;
+
+    line-height:1.75;
+
+    margin-bottom:7px;
+
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.news-date{
+
+    color:#777;
+
+    font-size:13px;
+
+    border-bottom:1px solid #eee;
+
+    padding-bottom:8px;
+
+    margin-bottom:11px;
+
+}
+
+
+/* =====================================================
+   NEWS IMAGE
+===================================================== */
+
+.news-photo{
+
+    width:100%;
+
+    height:auto;
+
+    max-height:650px;
+
+    display:block;
+
+    object-fit:contain;
+
+    background:#111;
+
+    margin:12px 0 16px;
+
+    border-radius:5px;
+
+    box-shadow:
+    0 3px 12px rgba(0,0,0,.18);
+
+}
+
+
+/* =====================================================
+   PARAGRAPH
+===================================================== */
+
+.news-post p{
+
+    color:#333;
+
+    font-size:17px;
+
+    line-height:2;
+
+    margin-bottom:11px;
+
+}
+
+
+/* =====================================================
+   INFO BOX
+===================================================== */
+
+.news-info{
+
+    background:#f6f6f6;
+
+    border-right:4px solid #d00000;
+
+    padding:11px 13px;
+
+    margin-top:12px;
+
+    line-height:2;
+
+    font-size:14px;
+
+    border-radius:4px;
+
+}
+
+
+/* =====================================================
+   REPORTER
+===================================================== */
+
+.reporter{
+
+    color:#a50000;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    margin-top:12px;
+
+}
+
+
+/* =====================================================
+   SHARE BUTTONS
+===================================================== */
+
+.share-box{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:7px;
+
+    margin-top:15px;
+
+    padding-top:12px;
+
+    border-top:1px solid #e7e7e7;
+
+}
+
+.share-title{
+
+    color:#555;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+}
+
+.share-btn{
+
+    border:0;
+
+    color:#fff;
+
+    padding:8px 13px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    transition:.2s;
+
+}
+
+.share-btn:hover{
+
+    opacity:.85;
+
+    transform:scale(1.04);
+
+}
+
+.whatsapp-btn{
+
+    background:#25D366;
+
+}
+
+.facebook-btn{
+
+    background:#1877F2;
+
+}
+
+.copy-btn{
+
+    background:#333;
+
+}
+
+
+/* =====================================================
+   QUICK CATEGORIES
+===================================================== */
+
+.quick-title{
+
+    margin-top:30px;
+
+}
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:13px;
+
+}
+
+.category-card{
+
+    background:
+    rgba(255,255,255,.97);
+
+    border-right:4px solid #d00000;
+
+    border-radius:6px;
+
+    padding:15px;
+
+    box-shadow:
+    0 4px 14px rgba(0,0,0,.3);
+
+    text-align:center;
+
+    transition:.2s;
+
+}
+
+.category-card:hover{
+
+    transform:
+    translateY(-3px);
+
+}
+
+.category-icon{
+
+    font-size:27px;
+
+    margin-bottom:7px;
+
+}
+
+.category-card h3{
+
+    color:#a00000;
+
+    font-size:16px;
+
+}
+
+.category-card p{
+
+    color:#666;
+
+    font-size:12px;
+
+    margin-top:5px;
+
+}
+
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.search-box{
+
+    background:
+    rgba(255,255,255,.97);
+
+    padding:14px;
+
+    margin-bottom:18px;
+
+    border-radius:6px;
+
+    box-shadow:
+    0 3px 13px rgba(0,0,0,.3);
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:1px solid #ccc;
+
+    padding:11px;
+
+    border-radius:5px;
+
+    outline:none;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+}
+
+.search-box button{
+
+    border:0;
+
+    color:#fff;
+
+    background:#c90000;
+
+    padding:0 18px;
+
+    border-radius:5px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+/* =====================================================
+   MORE NEWS
+===================================================== */
+
+.more-news{
+
+    text-align:center;
+
+    margin:25px 0;
+
+}
+
+.more-news button{
+
+    border:0;
+
+    color:#fff;
+
+    background:
+    linear-gradient(
+        135deg,
+        #e00000,
+        #850000
+    );
+
+    padding:11px 30px;
+
+    border-radius:5px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,.3);
+
+}
+
+
+/* =====================================================
+   CEO
+===================================================== */
+
+.ceo{
+
+    position:relative;
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:38px 15px;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.95)
+    ),
+
+    url("background22.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-top:4px solid #d00000;
+
+    box-shadow:
+    0 -5px 20px rgba(0,0,0,.55);
+
+}
+
+.ceo-brand{
+
+    font-size:32px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+}
+
+.ceo-brand span{
+
+    color:#e00000;
+
+}
+
+.ceo-line{
+
+    width:90px;
+
+    height:3px;
+
+    background:#d00000;
+
+    margin:10px auto 16px;
+
+}
+
+.ceo h2{
+
+    color:#e00000;
+
+    font-size:25px;
+
+    margin-bottom:8px;
+
+}
+
+.ceo-name{
+
+    font-size:23px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+}
+
+.ceo p{
+
+    color:#ddd;
+
+    font-size:15px;
+
+    line-height:2;
+
+    margin:4px;
+
+}
+
+.contact-btn{
+
+    display:inline-block;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    background:
+    linear-gradient(
+        135deg,
+        #e00000,
+        #8c0000
+    );
+
+    padding:10px 28px;
+
+    border-radius:5px;
+
+    margin-top:14px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#030303;
+
+    color:#aaa;
+
+    text-align:center;
+
+    padding:22px 10px;
+
+    font-size:13px;
+
+}
+
+.footer-logo{
+
+    color:#fff;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+}
+
+.footer-logo span{
+
+    color:#e00000;
+
+}
+
+.footer-line{
+
+    width:70px;
+
+    height:3px;
+
+    background:#d00000;
+
+    margin:9px auto;
+
+}
+
+.footer-2026{
+
+    color:#fff;
+
+    font-weight:bold;
+
+    font-size:15px;
+
+    margin-top:9px;
+
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+#topBtn{
+
+    position:fixed;
+
+    left:18px;
+
+    bottom:20px;
+
+    width:45px;
+    height:45px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:#d00000;
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:9999;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.5);
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    body{
+
+        background-attachment:scroll;
+
+    }
+
+    nav a{
+
+        font-size:11px;
+
+        padding:9px 10px;
+
+    }
+
+    .breaking-title{
+
+        font-size:11px;
+
+        padding:8px 9px;
+
+    }
+
+    .ticker{
+
+        font-size:11px;
+
+        padding:8px;
+
+        animation-duration:22s;
+
+    }
+
+    .live-bar{
+
+        margin-top:12px;
+
+        padding:0 7px;
+
+    }
+
+    .container{
+
+        margin-top:15px;
+
+        padding:0 7px;
+
+    }
+
+    .section-title{
+
+        font-size:19px;
+
+        padding:10px 12px;
+
+    }
+
+    .section-title span{
+
+        font-size:10px;
+
+    }
+
+    .news-content{
+
+        padding:13px;
+
+    }
+
+    .news-post h2{
+
+        font-size:20px;
+
+        line-height:1.85;
+
+    }
+
+    .news-post p{
+
+        font-size:15px;
+
+        line-height:2;
+
+    }
+
+    .news-info{
+
+        font-size:13px;
+
+    }
+
+    .share-title{
+
+        width:100%;
+
+    }
+
+    .share-btn{
+
+        padding:7px 10px;
+
+        font-size:10px;
+
+    }
+
+    .category-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .category-card{
+
+        padding:12px 7px;
+
+    }
+
+    .category-card h3{
+
+        font-size:14px;
+
+    }
+
+    .search-box{
+
+        padding:10px;
+
+    }
+
+    .search-box button{
+
+        padding:0 12px;
+
+    }
+
+    .ceo-brand{
+
+        font-size:26px;
+
+    }
+
+    .ceo h2{
+
+        font-size:21px;
+
+    }
+
+    .ceo-name{
+
+        font-size:19px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:380px){
+
+    nav a{
+
+        font-size:10px;
+
+        padding:8px 7px;
+
+    }
+
+    .news-post h2{
+
+        font-size:18px;
+
+    }
+
+    .news-post p{
+
+        font-size:14px;
+
+    }
+
+    .category-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+@media print{
+
+    nav,
+    .breaking,
+    .live-bar,
+    .share-box,
+    .search-box,
+    #topBtn{
+
+        display:none !important;
+
+    }
+
+    body{
+
+        background:#fff;
+
+    }
+
+}
+
+</style></head><body><!-- =====================================================
+     ONE NEWS HD TOP PHOTO
+===================================================== --><img
+class="top-image"
+src="file_000000001d5882118d06a379bb5594bc.png"
+alt="ONE NEWS HD"
+
+«»
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== --><nav><a href="#home">🏠 ہوم</a>
+
+<a href="#pakistan">🇵🇰 پاکستان</a>
+
+<a href="#punjab">پنجاب</a>
+
+<a href="#lahore">لاہور</a>
+
+<a href="#sadiqabad">صادق آباد</a>
+
+<a href="#karachi">کراچی</a>
+
+<a href="#world">دنیا</a>
+
+<a href="#sports">کھیل</a>
+
+<a href="#business">کاروبار</a>
+
+<a href="#contact">رابطہ</a>
+
+</nav><!-- =====================================================
+     BREAKING NEWS
+===================================================== --><div class="breaking"><div class="breaking-title">
+🚨 بریکنگ نیوز
+</div><div class="ticker-wrap"><div class="ticker">🚨 پاکستان ریلوے کے آپریشنل اسٹاف کی جانب سے آپریشنل الاؤنس میں نظرثانی اور اضافے کی درخواست
+
+   |   
+
+🚨 کراچی میں پانی کے بحران کے دوران 36 انچ کی مبینہ میٹھے پانی کی بلک سپلائی لائن سے پانی کے اخراج کی اطلاعات
+
+   |   
+
+🚨 صادق آباد سے اہم مقامی خبر
+
+   |   
+
+📰 ONE NEWS HD — ہر خبر آپ کے ساتھ
+
+</div></div></div><!-- =====================================================
+     LIVE BAR
+===================================================== --><div class="live-bar"><div class="live-inner"><span class="live-dot"></span>
+
+<strong>LIVE UPDATE</strong>
+
+  ONE NEWS HD پر تازہ ترین خبریں اور اہم اطلاعات مسلسل اپ ڈیٹ کی جا رہی ہیں۔
+
+</div></div><!-- =====================================================
+     MAIN
+===================================================== --><main
+class="container"
+id="home"><!-- SEARCH --><div class="search-box"><input
+type="text"
+id="newsSearch"
+placeholder="خبر تلاش کریں..."
+onkeyup="searchNews()"
+
+«»
+
+<button onclick="searchNews()">
+تلاش
+</button></div><div class="section-title"><span>
+📰
+</span>تازہ ترین خبریں
+
+<span>
+ONE NEWS HD
+</span></div><div
+class="news-container"
+id="newsContainer"><!-- =====================================================
+     NEWS 1
+===================================================== --><article
+class="news-post latest-news"
+id="pakistan"><div class="news-content"><div class="news-label">
+🚨 اہم خبر | پاکستان ریلوے
+</div><h2>
+پاکستان ریلوے کے ٹریڈنگ/آپریشنل اسٹاف کی جانب سے آپریشنل الاؤنس میں نظرثانی اور اضافے کی درخواست
+</h2><div class="news-date">
+28 اگست 2026
+</div><img
+class="news-photo"
+src="Ali00015.png"
+alt="پاکستان ریلوے"
+loading="eager"
+
+«»
+
+<p>
+پاکستان ریلوے کے ٹریڈنگ/آپریشنل اسٹاف کی جانب سے آپریشنل الاؤنس میں نظرثانی اور اضافے کی درخواست سامنے آئی ہے۔ ذرائع کے مطابق اسٹاف کا مؤقف ہے کہ وہ اپنی ذمہ داریاں مشکل اور چیلنجنگ حالات میں انجام دے رہے ہیں، اس لیے ان کے مسائل اور مطالبات پر سنجیدگی سے غور کیا جانا چاہیے۔
+</p><p>
+درخواست میں آپریشنل اسٹاف کے حقِ مطالبہ، عملی محنت کے اعتراف اور ملازمین کی فلاح و بہبود پر زور دیا گیا ہے۔
+</p><div class="news-info">📌 <strong>درخواست گزار:</strong>
+محمد عثمان شاہد
+
+<br>📍 <strong>مقام:</strong>
+پاکستان ریلوے ہیڈکوارٹرز لاہور
+
+<br>📰 <strong>ادارہ:</strong>
+ONE NEWS HD
+
+</div><div class="reporter">
+ONE NEWS HD — ہر خبر آپ کے ساتھ 📰
+</div><div class="share-box"><span class="share-title">
+خبر شیئر کریں:
+</span><button
+class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(this)">
+WhatsApp
+</button>
+
+<button
+class="share-btn facebook-btn"
+onclick="shareFacebook(this)">
+Facebook
+</button>
+
+<button
+class="share-btn copy-btn"
+onclick="copyNews(this)">
+Copy
+</button>
+
+</div></div></article><!-- =====================================================
+     NEWS 2 KARACHI
+===================================================== --><article
+class="news-post"
+id="karachi"><div class="news-content"><div class="news-label">
+🚨 بریکنگ نیوز | کراچی
+</div><h2>
+کراچی میں پانی کے بحران کے دوران ایک اہم معاملہ سامنے آیا
+</h2><div class="news-date">
+28 اگست 2026
+</div><img
+class="news-photo"
+src="file_0000000022208211b0668ecd5031d653.png"
+alt="کراچی پانی بحران"
+loading="lazy"
+
+«»
+
+<p>
+کراچی میں پانی کے بحران کے دوران ایک اہم معاملہ سامنے آیا ہے۔ لیاری ندی، سندھی ہوٹل کے آخری اسٹاپ اور تین ہٹی کے قریب 36 انچ کی مبینہ میٹھے پانی کی بلک سپلائی لائن سے پانی کے اخراج کی اطلاعات ہیں، جس کے باعث بڑی مقدار میں قیمتی پانی ضائع ہونے کا خدشہ ہے۔
+</p><p>
+شہریوں نے متعلقہ حکام سے فوری نوٹس لینے، لائن کا معائنہ کرنے اور پانی کے ضیاع کی وجوہات کی تحقیقات کا مطالبہ کیا ہے۔
+</p><div class="news-info">📍 <strong>مقام:</strong>
+کراچی
+
+<br>🎥 <strong>ویڈیو:</strong>
+ONE NEWS HD
+
+<br>📰 <strong>کراچی بیورو رپورٹ:</strong>
+حب علی جھانگر
+
+</div><div class="reporter">
+کراچی بیورو رپورٹ: حب علی جھانگر
+</div><div class="share-box"><span class="share-title">
+خبر شیئر کریں:
+</span><button
+class="share-btn whatsapp-btn"
+onclick="shareWhatsApp(t
